@@ -1,0 +1,157 @@
+#banner-wrap{
+    width: 100%;
+    background-color: #b9d3f8;
+}
+
+.bannerBox{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#banner-wrap>img{
+    display: block;
+    width: 1200px;
+    height: 780px;
+    margin: 0 auto; 
+}
+
+#banner-wrap a>img{
+    width: 145px;
+    height: 58px;
+}
+.topFix{
+    position: absolute;
+    top: 0;
+    left: 243px;
+}
+
+/* 右侧登录栏 */
+#loginBox{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.login{
+    width: 360px;
+    height: 670px;
+    background: white;
+    position: absolute;
+    bottom: 40px;
+    right: 0px;
+    padding: 30px 30px 0 30px;
+}
+
+.login h1{
+    width: 160px;
+}
+.login h1 img{
+    width: 160px;
+    height: 42px;
+    margin-bottom: 15px;
+    margin-left: 100px;
+}
+.login h2{
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.login p:nth-of-type(1){
+    text-align: right;
+    margin-bottom: 20px;
+}
+.login p:nth-of-type(1) a{
+    color: #456FFF;
+    font-size: 14px;
+}
+
+#numBox{
+    border: 1px solid #dedfe0;
+    width: 350px;
+    line-height: 46px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+#codeBox{
+    border: 1px solid #dedfe0;
+    width: 350px;
+    line-height: 46px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.selectBox{
+    color: #999999;
+}
+.autologin{
+    font-size: 14px;
+    text-align: right;
+    margin-bottom: 20px;
+    color: #666666;
+}
+
+#loginBtn{
+    width: 100%;
+    line-height: 46px;
+    background: #418eff;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: none;
+}
+#signBtn{
+    width: 100%;
+    line-height: 44px;
+    background: white;
+    border: 1px solid #456fff;
+    color: #456FFF;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+#loginBtn:hover{
+    background: #456FFF;
+}
+
+.login p:nth-of-type(2){
+    color: #999999;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.login p:nth-of-type(3){
+    text-align: center;
+    margin-bottom: 30px;
+}
+.login p:nth-of-type(3)>a{
+    font-size: 14px;
+    color: #666666;  
+}
+
+.login legend{
+    margin-left: 130px;
+    padding: 0 10px;
+    color: #999999;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.login fieldset{
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #999999;
+}
+
+.login fieldset>div img{
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    margin: 0 10px;
+}
+.login fieldset>div{
+    text-align: center;
+}

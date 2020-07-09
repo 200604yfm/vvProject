@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <!-- 背景banner -->
+    <div id="banner-wrap">
+        <div class="bannerBox">
+
+            <img src="../images/login-banner.png" alt="">
+
+            <div class="topFix">
+                <a href="#"><img src="../images/login-1.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 右侧登录栏 -->
+    <div id="loginBox">
+        <form action="" class="login">
+            <h1><a href="#"><img src="../images/login-logo.png" alt=""></a></h1>
+            <h2>帐号登录</h2>
+            <p><a href="#">短信验证码登录</a></p>
+
+            <input type="text" id="numBox" placeholder="请输入手机号"><br>
+
+            <input type="password" id="codeBox" placeholder="请输入密码"><br>
+
+            <div class="autologin">
+                <input type="checkbox" class="selectBox">
+                两周内自动登录
+            </div>
+
+            <!-- <button id="loginBtn">登录</button><br>
+            <button id="signBtn">注册vivo账号</button> --> 
+            <!-- button有跳页功能不能用 -->
+            <input type="text" id="loginBtn" value="登录">
+            <input type="text" id="signBtn" value="注册vivo账号">
+
+            <p>短信可能会有延时，请耐心等待，如果长时间未收到短信，请60秒后重新获取</p>
+            <p><a href="#">忘记密码</a></p>
+            
+            <fieldset>
+                <legend>其他方式登录</legend>
+                <div>
+                    <a href="#"><img src="../images/login-weixin.png" alt=""></a>
+                    <a href="#"><img src="../images/login-zfb.png" alt=""></a>
+                    <a href="#"><img src="../images/login-weibo.png" alt=""></a>
+                    <a href="#"><img src="../images/login-rr.png" alt=""></a>
+                </div>
+            </fieldset>
+
+        </form>
+    </div>
+
+    <script src="../lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $('#loginBtn').click(function(){
+            $.get('../php/login.php',{
+                username: $('#numBox').val(),
+                password: $('#codeBox').val()
+            }, function(data){
+                console.log(data);
+                var json = JSON.parse(data); //把json字符串转为对象
+                console.log(json);
+                if(json.username==$('#numBox').val()){
+                    // alert('登录成功');
+                    location.href = './details.html'; //成功跳到详情页
+                }else{
+                    alert('登录失败')
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>
